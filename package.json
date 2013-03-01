@@ -1,0 +1,40 @@
+{
+    "name": "batch-iptables",
+    "description": "A batch library for iptables rules",
+    "version": "0.0.1",
+    "author": "Ken Perkins <ken@ksperkins.com>",
+    "maintainers": [
+        {
+            "name": "Ken Perkins",
+            "email": "ken@ksperkins.com"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "http://github.com/kenperkins/iptables-tx.git"
+    },
+    "keywords": [
+        "iptables",
+        "firewall",
+        "batch",
+        "transaction"
+    ],
+    "scripts": {
+        "test": "make test"
+    },
+    "dependencies": {
+        "pkginfo": "0.2.x",
+        "request": "2.9.x",
+        "underscore": "1.4.x",
+        "async": "0.1.22"
+    },
+    "devDependencies": {
+        "mocha": "1.6.x",
+        "should": "*"
+    },
+    "main": "./lib/iptables-tx",
+    "engines": {
+        "node": ">= 0.8"
+    }
+}
+
