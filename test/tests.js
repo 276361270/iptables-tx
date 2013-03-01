@@ -331,8 +331,7 @@ var fw = new Iptables(function(cmd, callback) {
 
     count++;
     console.log(cmd);
-    callback(count % 5 === 0, count % 5 === 0 ? 'Unable to run command' : 'Success',
-        count % 5 === 0 ? 'ERROR UNKNOWN' : '');
+    callback();
 });
 
 fw.init()
@@ -346,6 +345,7 @@ fw.init()
         src: '0.0.0.0/0',
         dst: '192.168.10.1'
     })
+    .allow({ chain: 'INPUT', protocol: 'tcp', dport: 3123 })
     .allow({
         src: '0.0.0.0/0',
         dst: '192.168.10.2'
